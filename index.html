@@ -12,13 +12,13 @@
 <head>
     <title>Doe sangue ! doe vida ! </title>
     <meta charset="utf-8" />
-    <link href="style.css" rel="stylesheet"/>    
+    <link href="/style.css" rel="stylesheet"/>    
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">    
 </head>
 
 <body>
     <header>
-        <img src="logo.png" alt="DOE image" class="logo">
+        <img src="/logo.png" alt="DOE image" class="logo">
         <h2>A sua doação importa</h2>
         <p>Até 3 vidas com 1 doação</p>
         <p>Mais de 38.000 mil doações são necessarias todos os dias</p>
@@ -30,7 +30,7 @@
 
     <section class="form hide">
         <h2>Entre na lista de doadores</h2>
-        <form action="/">
+        <form action="/" method="POST">
         <input 
             type="text" 
             name="name"
@@ -55,28 +55,20 @@
     <main>
         <h2>Últimos <span>doadores</span></h2>
         <section class="donors">
+
+            
+            {% for donor in donors %}
             <div class="donor">
-                <div class="blood">AB+</div>
-                <p>Denilson Sousa</p>
+                <div class="blood">{{donor.blood}}</div>
+                <p>{{donor.name}}</p>
             </div>
-            <div class="donor">
-                <div class="blood">A+</div>
-                <p>Max</p>
-            </div>
-            <div class="donor">
-                <div class="blood">B+</div>
-                <p>ismael</p>
-            </div>
-            <div class="donor">
-                <div class="blood">O+</div>
-                <p>Lorin</p>
-            </div>
+            {%endfor%}
 
         </section>
     </main>
 
     <footer>Com Amor <span>Rocketseat</span></footer>
-    <script src="scripts.js"></script>
+    <script src="/scripts.js"></script>
 </body>
 
 
