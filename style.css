@@ -129,7 +129,10 @@ footer{
     padding: 16px;
     border-top: 1px solid #eee;
 }
+footer span{
+    color: #ff4f4f
 
+}
 /* FUNCIONALIDADES COM JAVASCRIPT*/
 section.form{
     transition: all 300ms;
